@@ -3580,8 +3580,7 @@ describe("Linter", () => {
                                                         rangeIndex => rangeIndex + blockIndex * 4
                                                     )
                                                 }
-                                            })
-                                        )
+                                            }))
                                     ),
                                 []
                             );
