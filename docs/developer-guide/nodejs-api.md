@@ -69,6 +69,7 @@ The most important method on `Linter` is `verify()`, which initiates linting of 
     * `filename` - (optional) the filename to associate with the source code.
     * `saveState` - (optional) see below. This will override any value passed as the fourth argument if an options object is used here instead of the filename.
     * `allowInlineConfig` - (optional) set to `false` to disable inline comments from changing eslint rules.
+    * `reportUnusedDisableDirectives` - (optional) when set to `true`, adds reported errors for unused `eslint-disable` directives when no problems would be reported in the disabled area anyway.
 * `saveState` - (optional) set to true to maintain the internal state of `linter` after linting (mostly used for testing purposes)
 
 You can call `verify()` like this:
@@ -295,6 +296,7 @@ The `CLIEngine` is a constructor, and you can create a new instance by passing i
 * `parser` - Specify the parser to be used (default: `espree`). Corresponds to `--parser`.
 * `parserOptions` - An object containing parser options (default: empty object). Corresponds to `--parser-options`.
 * `plugins` - An array of plugins to load (default: empty array). Corresponds to `--plugin`.
+* `reportUnusedDisableDirectives` - When set to `true`, adds reported errors for unused `eslint-disable` directives when no problems would be reported in the disabled area anyway (default: false). Corresponds to `--report-unused-disable-directives`.
 * `rulePaths` - An array of directories to load custom rules from (default: empty array). Corresponds to `--rulesdir`.
 * `rules` - An object of rules to use (default: null). Corresponds to `--rule`.
 * `useEslintrc` - Set to false to disable use of `.eslintrc` files (default: true). Corresponds to `--no-eslintrc`.
